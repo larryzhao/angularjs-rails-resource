@@ -200,7 +200,10 @@
                 var params = RailsResource.getParameters(queryParams);
 
                 if (params) {
-                    return angular.extend({params: params}, RailsResource.httpConfig);
+                    return angular.extend({
+                        params: params,
+                        headers: {'Content-Type': 'application/json;charset=utf-8'}
+                      }, RailsResource.httpConfig);
                 }
 
                 return angular.copy(RailsResource.httpConfig);
