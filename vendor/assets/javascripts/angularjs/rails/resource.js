@@ -229,15 +229,13 @@
             };
 
             RailsResource.query = function (queryParams, context) {
-                // var url = RailsResource.resourceUrl(context) + ".json"
-                // return RailsResource.processResponse($http.get(url, RailsResource.getHttpConfig(queryParams)));
-                return RailsResource.processResponse($http.get(RailsResource.resourceUrl(context), RailsResource.getHttpConfig(queryParams)));
+                var url = RailsResource.resourceUrl(context) + ".json"
+                return RailsResource.processResponse($http.get(url, RailsResource.getHttpConfig(queryParams)));
             };
 
             RailsResource.get = function (context, queryParams) {
-                // var url = RailsResource.resourceUrl(context) + ".json"
-                // return RailsResource.processResponse($http.get(url, RailsResource.getHttpConfig(queryParams)));
-                return RailsResource.processResponse($http.get(RailsResource.resourceUrl(context), RailsResource.getHttpConfig(queryParams)));
+                var url = RailsResource.resourceUrl(context) + ".json"
+                return RailsResource.processResponse($http.get(url, RailsResource.getHttpConfig(queryParams)));
             };
 
             RailsResource.prototype.processResponse = function (promise) {
