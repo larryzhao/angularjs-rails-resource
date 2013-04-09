@@ -207,7 +207,7 @@
                 }
 
                 // return angular.copy(RailsResource.httpConfig);
-                return return angular.extend({ headers: {'Content-Type': 'application/json;charset=utf-8'} }, RailsResource.httpConfig); 
+                return angular.extend({ headers: {'Content-Type': 'application/json;charset=utf-8'} }, RailsResource.httpConfig); 
             };
 
             /**
